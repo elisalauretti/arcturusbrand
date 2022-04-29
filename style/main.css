@@ -1,0 +1,370 @@
+/*******************GENERAL***************/
+*{
+    font-family: Roboto, sans-serif;        /***togli img che esce a dx e tutto scoorre a dx***/
+    text-decoration: none;
+    color: black;
+    list-style-type: none;
+   
+}
+html{
+    box-sizing: border-box;
+}
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    width: 100%;
+}
+/**********VARIABILI***********/
+:root{
+    --logoposition: calc(50vh - 84,375px - 1688.75px)
+}
+/*******************HEADER***************/
+
+header{
+    
+                        /****non c'è un modo per mettere al centro solo un elemento figlio?**/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+   
+    
+}
+
+
+
+
+#logo-container{
+    width: 168.75px;
+    height: 90px;
+    
+    margin: 0;
+    line-height: 0;
+border: 1px dashed #000000;
+box-sizing: border-box;
+ 
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+#logo-container h4{
+
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+
+    text-align: center;
+
+    padding: 0;
+    margin:0;
+    
+    
+}
+
+#banner{
+    width: 100%;
+    height: 32px;
+    background-color: black;
+    line-height: 0;
+
+    flex-grow: 100em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#banner p{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0.1em;
+    color:white;
+    text-align: center;
+}
+
+#fantasma{
+    width: 168.75px;
+    height: 90px;
+    margin: 0;
+}
+
+/******************NAVIGATION***************/
+nav{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+
+    width: 168.75px;
+    height: 90px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5em;
+
+
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+nav li{
+    
+    margin: 0.5em;
+    padding: 0;
+    display: inline-block; 
+}
+
+/****************MAIN**************/
+
+h5{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+}
+#tag{
+    text-transform: uppercase;
+}
+h1{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    
+}
+h2{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 120%;
+}
+.minicard h3{
+    font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: 0.01em;
+}
+#card2 h3{
+    font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+}
+#card p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+}
+.blocco1 p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+}
+ #card a{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+ }
+ .blocco1 a{
+    letter-spacing: 0.05em;
+ }
+ .blocco1{
+    width: 100%;
+    height: 685px;
+    
+
+
+    background: url('https://images.unsplash.com/photo-1624160719183-b3b9010a77c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80') no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment:scroll;
+    background-repeat: no-repeat;
+
+    
+    display: flex;                                  
+    align-items: flex-end;
+    
+    
+   
+ }
+
+ .blocco1 #card{
+    width: 532px;
+    height: 311px;
+    background-color:  rgba(255, 255, 255, 0.75);
+    
+    position: relative;
+    margin-left: 10vh;
+ }
+
+
+ #tag{
+    position: absolute;
+    top:12%;
+    left: 10%;
+    margin: 0;
+    padding: 0;
+}
+.blocco1 #card h1{
+    position: absolute;
+    top:20%;
+    left: 10%;
+    margin: 0;
+    padding: 0;
+}
+.blocco1 #card p{
+    position: absolute;
+    top:55%;
+    left: 10%;
+    right:10%;
+    margin: 0;
+    padding: 0;
+}
+.blocco1 #card a{
+    position: absolute;
+    
+    left: 10%;
+    bottom: 12%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/****************FOOTER***************/
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+}
+.banda{
+    flex-grow: 100%;
+    padding: 0;
+    height: 200px ;
+    width: 100%;
+}
+.banda ul{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+                    
+    display: flex;
+    
+    justify-content: space-around;
+    align-items: center;
+}
+.banda li{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.01em;
+
+    align-self: center;
+    
+}
+.banda li a{
+    width: 186px;
+    height: 38px;
+}
+.send{
+    flex-grow: 50%;
+}
+#help{
+    flex-grow: 25%;
+}
+#info{
+    flex-grow: 25%;
+}
+.minicard{
+    width: 25%;
+    height: 458px;
+    margin-right: 0;
+}
+.minicard ul{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.social{
+    width: 100%;
+    height: 100px;
+    flex-grow: 100%;    /****forse vh****/
+
+    display: flex;
+    align-items: center;                /***per mobile devi mettere che va a capo***/
+    justify-content: center;
+}
+.social h3{
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+.social ul{
+    margin: 0;
+    height: ;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.privacy{
+    flex-grow: 100%;
+
+    background-color:#000000 ; 
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+
+}
+.privacy ul{
+    height:100%;
+    width: 100%;
+    display: flex;
+    justify-content: center ;     /***per mobile devi mettere che va a capo***/
+    align-items: center;
+    gap: 3%;
+    
+}
+.privacy li{
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 140%;
+   
+}
+.privacy li a{
+    color: #F5F5F5;
+    
+}
+.privacy ul:first-child{
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 140%;
+    
+}
