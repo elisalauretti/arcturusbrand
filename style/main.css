@@ -1,10 +1,9 @@
 /*******************GENERAL***************/
 *{
-    font-family: Roboto, sans-serif;        /***togli img che esce a dx e tutto scoorre a dx***/
+    font-family: Roboto, sans-serif;        
     text-decoration: none;
-    color: black;
+    color: black;           /**dovresti alleggerire img pagina è lenta**/
     list-style-type: none;
-   
 }
 html{
     box-sizing: border-box;
@@ -15,72 +14,49 @@ html{
 
 body{
     margin: 0;
-    width: 100%;
-}
-/**********VARIABILI***********/
-:root{
-    --logoposition: calc(50vh - 84,375px - 1688.75px)
+    width: 100%;   /***usa grid per tenere header su e footer giù***/
+    
 }
 /*******************HEADER***************/
 
-header{
-    
-                        /****non c'è un modo per mettere al centro solo un elemento figlio?**/
+header{                  
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    margin: 0;
-   
-    
+    margin: 0; 
+    background-color: #FFFFFF;
 }
-
-
-
-
 #logo-container{
     width: 168.75px;
-    height: 90px;
-    
+    height: 100px;
     margin: 0;
     line-height: 0;
 border: 1px dashed #000000;
 box-sizing: border-box;
- 
-   
     display: flex;
     justify-content: center;
     align-items: center;
-   
 }
 #logo-container h4{
-
     font-weight: 400;
     font-size: 19px;
     line-height: 22px;
     letter-spacing: 0.01em;
-
     text-align: center;
-
     padding: 0;
-    margin:0;
-    
-    
+    margin:0;  
 }
-
 #banner{
     width: 100%;
     height: 32px;
     background-color: black;
     line-height: 0;
-
     flex-grow: 100em;
-
     display: flex;
     align-items: center;
-    justify-content: center;
-
+    justify-content: space-between;
 }
 #banner p{
     font-weight: 700;
@@ -90,28 +66,34 @@ box-sizing: border-box;
     color:white;
     text-align: center;
 }
-
-#fantasma{
-    width: 168.75px;
-    height: 90px;
-    margin: 0;
+#banner button{
+    width: 100px;     /****da aggiustare per mobile*******/
+    height:20px;
+    background-color: transparent;
+    color: #FFFFFF;
 }
 
+#fantasmino{             /****da aggiustare per mobile*******/
+    width: 100px;   /***display:none per accessibilità**/
+    height: 20px;
+}
+#fantasma{
+    width: 168.75px;
+    height: 100px;
+    margin: 0;
+}
 /******************NAVIGATION***************/
 nav{
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
-
     width: 168.75px;
-    height: 90px;
-
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     row-gap: 5em;
-
-
+    
 }
 nav ul{
     margin: 0;
@@ -119,14 +101,19 @@ nav ul{
     display: inline-block;
 }
 nav li{
-    
     margin: 0.5em;
     padding: 0;
     display: inline-block; 
 }
-
 /****************MAIN**************/
-
+main#home{
+        width: 100%;
+        height: 2500px;   /******** da aggiustare *****/
+        display: flex;
+        flex-direction: column;
+        row-gap: 64px;
+        background-color: #F5F5F5;
+    }
 h5{
     font-weight: 500;
     font-size: 12px;
@@ -139,232 +126,425 @@ h5{
 h1{
     font-weight: 700;
     font-size: 40px;
-    line-height: 120%;
-    
+    line-height: 120%;    
+    margin-bottom: 64px;
 }
 h2{
     font-weight: 700;
     font-size: 32px;
     line-height: 120%;
 }
-.minicard h3{
-    font-weight: 700;
-font-size: 16px;
-line-height: 19px;
-letter-spacing: 0.01em;
-}
-#card2 h3{
-    font-weight: 700;
-font-size: 24px;
-line-height: 28px;
-}
-#card p{
+.card p{
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.01em;
 }
-.blocco1 p{
+#blocco1 p{
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 0.01em;
 }
- #card a{
+ .card a{
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
  }
- .blocco1 a{
+ #blocco1 a{
     letter-spacing: 0.05em;
  }
- .blocco1{
+ #blocco1{
     width: 100%;
     height: 685px;
-    
-
-
-    background: url('https://images.unsplash.com/photo-1624160719183-b3b9010a77c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80') no-repeat;
+   
 	background-position: center;
 	background-size: cover;
 	background-attachment:scroll;
-    background-repeat: no-repeat;
-
-    
+    background-repeat: no-repeat;  
     display: flex;                                  
     align-items: flex-end;
-    
-    
-   
  }
-
- .blocco1 #card{
+ #blocco1 .card{
     width: 532px;
     height: 311px;
     background-color:  rgba(255, 255, 255, 0.75);
-    
-    position: relative;
-    margin-left: 10vh;
+    margin-left: 40px;
+    padding-left: 54px;
+     
+ }   
+ #blocco1 h1{
+    margin-bottom: 64px;
+    margin-top: 10px;
  }
+ #blocco1 h5{
+     margin: 40px 0 10px;
+}     
+#blocco1 p{
+        margin-bottom: 40px;
+    }
+#blocco1 a{
+        margin-bottom: 40px;
+    }
+ .card#blocco2{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	min-height: 800px;
+	background-color: #fff;
+}
+.card#blocco3{
+    display: grid;
+	grid-template-columns: 1fr 1fr;
+	min-height: 800px;
+	background-color: #fff;
+    grid-column: 2 / 3;
+	grid-row: 1 / 2;
+}
+#blocco3 .picture{
+    grid-column: 2 / 3;
+	grid-row: 1 / 2;
+}
+.card .picture{
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
 
-
- #tag{
-    position: absolute;
-    top:12%;
-    left: 10%;
-    margin: 0;
-    padding: 0;
+.card .contenuto{
+        padding: 8.412197686645636%;
+        align-self: center;
 }
-.blocco1 #card h1{
-    position: absolute;
-    top:20%;
-    left: 10%;
-    margin: 0;
-    padding: 0;
+.card h2{
+    margin: 10px 0 32px;
 }
-.blocco1 #card p{
-    position: absolute;
-    top:55%;
-    left: 10%;
-    right:10%;
-    margin: 0;
-    padding: 0;
-}
-.blocco1 #card a{
-    position: absolute;
+.bottonenero{
+    width:169.29px;
+    height:48px;
+    margin-top: 32px;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
-    left: 10%;
-    bottom: 12%;
-    margin: 0;
-    padding: 0;
-    
 }
-
+.bottonenero a{
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+.contenuto a{
+    color: #FFFFFF;  
+}
 /****************FOOTER***************/
-
-footer{
+footer{        
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    
+    background-color: #FFFFFF;
 }
-.banda{
-    flex-grow: 100%;
-    padding: 0;
-    height: 200px ;
+#banda{  
+    height: 160px;        
     width: 100%;
-}
-.banda ul{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-                    
+    background-color:#F5F5F5;
     display: flex;
-    
-    justify-content: space-around;
     align-items: center;
+    justify-content: center;
+    margin:auto;
 }
-.banda li{
+#banda ul{  
+    height: 100%;
+    width: 100%;
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;            
+}
+#banda li{                 
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
-    text-align: center;
     letter-spacing: 0.01em;
-
-    align-self: center;
-    
+    text-align: center;
 }
-.banda li a{
+#banda li a{
     width: 186px;
     height: 38px;
 }
-.send{
-    flex-grow: 50%;
+#send{
+    height:358px;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: 14px;
 }
-#help{
-    flex-grow: 25%;
+#send h3{
+    Width: 440px;
+    Height: 56px;
+    font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+flex-grow: 100%;
 }
-#info{
-    flex-grow: 25%;
+#send p{
+    width: 452px;
+height: 48px;
+font-weight: 400;
+font-size: 10px;
+line-height: 12px;
+color: #9D9D9D;
+}
+#send form{
+    width: 317px;
+    height: 48px;
+    border: 0 0 1px 0;
+    border-bottom: 1px solid #000000;  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+#send form input{
+    border:0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: #6B6B6B;
+    width: 283px;
+    height: 19px;
+}
+#send button{
+    background-color: #9D9D9D;
+    width:120px;
+    height: 48px;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    justify-content: center;
+}
+
+.mini-card{
+    width: 25%;
+    height:358px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 15px;
+}
+.iconaminicard{
+    width:20px;    /*****sicuramente non mantenibile e non responsive***/
+    height: 70%;
 }
 .minicard{
-    width: 25%;
-    height: 458px;
-    margin-right: 0;
+    width: 100%;
+    height:70%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px; 
+}
+.minicard h3{
+    height: 19px;
+    font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: 0.01em;
+margin: 0;
 }
 .minicard ul{
-    height: 100%;
     width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    align-items: flex-start;
+    justify-content:space-around;
+    row-gap: 17px; 
 }
-
-
-.social{
+#social{
     width: 100%;
-    height: 100px;
+    height: 80px;
     flex-grow: 100%;    /****forse vh****/
-
-    display: flex;
-    align-items: center;                /***per mobile devi mettere che va a capo***/
+    display: flex;               /***per mobile devi mettere che va a capo***/
     justify-content: center;
+    align-items: center;
 }
-.social h3{
+#social h3{
     font-weight: 800;
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
-.social ul{
+#social ul{
     margin: 0;
-    height: ;
     width: 300px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    
 }
-
-.privacy{
+#privacy{
     flex-grow: 100%;
 
     background-color:#000000 ; 
-    height: 70px;
+    height: 48px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;    
-
 }
-.privacy ul{
+#privacy ul{
     height:100%;
     width: 100%;
     display: flex;
     justify-content: center ;     /***per mobile devi mettere che va a capo***/
     align-items: center;
     gap: 3%;
-    
 }
-.privacy li{
+#privacy li{
     font-weight: 600;
     font-size: 10px;
     line-height: 140%;
-   
 }
-.privacy li a{
-    color: #F5F5F5;
-    
+#privacy li a{
+    color: #F5F5F5; 
 }
-.privacy ul:first-child{
+#privacy ul:first-child{
     font-weight: 400;
     font-size: 10px;
     line-height: 140%;
+}
+
+
+/*********LISTATO*********/
+main#listato{
+    display: flex;
+    flex-direction: column;
+}
+.striscia{
+    height: 162px;
+    width:100%;
+    text-align: center;
+    background-color:#F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.striscia h1{
+    margin: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 120%;
+    text-align: center;
     
+}
+.numprod{
+    width:100%;
+    height: 70px;
+    background-color: #E5E5E5; 
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.numprod p{
+    display: inline-block;
+    width: 110x;
+    margin-right: 36px;
+height: 24px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: 0.05em;
+color: #9D9D9D;
+text-align: center;
+vertical-align: middle;
+}
+.numprod #icone2{
+    width: 106px;
+    height:20px;
+    display: flex;
+    justify-content: center;
+    column-gap: 5px;
+    margin-left: 36px;
+}
+.listaprod{                          /**non lo prende e mette spazio tra le righe***/
+    display: grid;
+    grid-template-rows: 0.25 fr 0.25 fr 0.25 fr 0.25 fr;
+    grid-template-columns: 0.25 fr 0.25 fr 0.25 fr 0.25 fr;
+    min-height:2376px;
+    width: 100%;
+    
+}
+.schedaprodotto{
+    display: flex;
+    flex-direction: column;
+}
+.imgprodotto{
+    width: 398px;
+    height: 398px;
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.descrizioneprod{
+    background-color: #F5F5F5;
+    padding-left: 16px;
+    height: 178px;
+    width: 398px;
+}
+.descrizioneprod h2{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+margin-top: 35px;
+}
+.descrizioneprod p:nth-child(2){
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 120%;
+margin-top: 4px;
+}
+.descrizioneprod p:nth-child(3){
+    font-weight: 800;
+font-size: 14px;
+line-height: 200%;
+margin-bottom: 32px;
+margin-right: 8px;
+display: inline-block;
+}
+.descrizioneprod p:last-of-type{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 230%;
+text-decoration-line: line-through;
+margin-bottom: 32px;
+display: inline-block;
 }
