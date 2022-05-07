@@ -386,6 +386,7 @@ margin: 0;
     display: flex;               /***per mobile devi mettere che va a capo***/
     justify-content: center;
     align-items: center;
+    column-gap: 28px;
 }
 #social h3{
     font-weight: 800;
@@ -396,10 +397,12 @@ margin: 0;
 }
 #social ul{
     margin: 0;
+    padding: 0;
     width: 300px;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    column-gap: 31px;
 }
 #privacy{
     flex-grow: 100%;
@@ -409,7 +412,8 @@ margin: 0;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
+    
 }
 #privacy ul{
     height:100%;
@@ -417,7 +421,8 @@ margin: 0;
     display: flex;
     justify-content: center ;     /***per mobile devi mettere che va a capo***/
     align-items: center;
-    gap: 3%;
+    column-gap: 8px;    
+    padding-left: 0;
 }
 #privacy li{
     font-weight: 600;
@@ -435,7 +440,7 @@ margin: 0;
 
 
 /*********LISTATO*********/
-main#listato{
+main#listato{                  /*chiedere chi fa da link per passare a pag3*/
     display: flex;
     flex-direction: column;
 }
@@ -491,28 +496,51 @@ vertical-align: middle;
 }
 .listaprod{                          /**non lo prende e mette spazio tra le righe***/
     display: grid;
-    grid-template-rows: 0.25 fr 0.25 fr 0.25 fr 0.25 fr;
-    grid-template-columns: 0.25 fr 0.25 fr 0.25 fr 0.25 fr;
-    min-height:2376px;
-    width: 100%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-height: 2544px;
+    row-gap: 2px;
+    column-gap: 2px;
+    
     
 }
 .schedaprodotto{
     display: flex;
     flex-direction: column;
+    row-gap: 0;
+    max-height: 576px;
 }
 .imgprodotto{
-    width: 398px;
-    height: 398px;
+    max-width: 398px;
+    min-height: 398px;   /*se lo levo spariscono le img**/
     background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+    overflow: hidden;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 800;
+font-size: 10px;
+line-height: 12px;
+letter-spacing: 0.05em;
+color: black;    /* X6  sparisce, va sotto l'img, succede appena ho messo flex*/
+padding-left: 16px;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+column-gap: 321px;
+row-gap: 330px;
 }
+.imgprodotto button{
+    background-color: transparent;
+    border:0;
+}
+
 .descrizioneprod{
     background-color: #F5F5F5;
     padding-left: 16px;
-    height: 178px;
-    width: 398px;
+    max-height: 178px;
+    max-width: 398px;
 }
 .descrizioneprod h2{
     font-family: 'Roboto';
