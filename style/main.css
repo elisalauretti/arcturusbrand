@@ -2,7 +2,7 @@
 *{
     font-family: Roboto, sans-serif;        
     text-decoration: none;
-    color: black;           /**dovresti alleggerire img pagina è lenta**/
+    color: black;          
     list-style-type: none;
 }
 html{
@@ -14,7 +14,7 @@ html{
 
 body{
     margin: 0;
-    width: 100%;   /***usa grid per tenere header su e footer giù***/
+    width: 100%;   /***usa grid o flex per tenere header su e footer giù***/
     
 }
 /*******************HEADER***************/
@@ -105,6 +105,7 @@ nav li{
     padding: 0;
     display: inline-block; 
 }
+/*********************Home***********************************************************************/
 /****************MAIN**************/
 main#home{
         width: 100%;
@@ -349,7 +350,7 @@ color: #9D9D9D;
     column-gap: 15px;
 }
 .iconaminicard{
-    width:20px;    /*****sicuramente non mantenibile e non responsive***/
+    width:20px;    /****da aggiustare per mobile***/
     height: 70%;
 }
 .minicard{
@@ -437,9 +438,7 @@ margin: 0;
     font-size: 10px;
     line-height: 140%;
 }
-
-
-/*********LISTATO*********/
+/*****************************************LISTATO**************************************************************************/
 main#listato{                  /*chiedere chi fa da link per passare a pag3*/
     display: flex;
     flex-direction: column;
@@ -460,8 +459,7 @@ main#listato{                  /*chiedere chi fa da link per passare a pag3*/
     font-weight: 400;
     font-size: 40px;
     line-height: 120%;
-    text-align: center;
-    
+    text-align: center;    
 }
 .numprod{
     width:100%;
@@ -494,21 +492,28 @@ vertical-align: middle;
     column-gap: 5px;
     margin-left: 36px;
 }
-.listaprod{                          /**non lo prende e mette spazio tra le righe***/
+.listaprod{                          
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     max-height: 2544px;
     row-gap: 2px;
-    column-gap: 2px;
-    
-    
+    column-gap: 2px;  
 }
 .schedaprodotto{
     display: flex;
     flex-direction: column;
     row-gap: 0;
     max-height: 576px;
+}
+.imgprodotto button{
+    background-color: transparent;
+    border:0;
+    padding: 0;
+}
+.imgprodotto p{
+    display: inline-block;
+    margin: 0;
 }
 .imgprodotto{
     max-width: 398px;
@@ -525,17 +530,15 @@ line-height: 12px;
 letter-spacing: 0.05em;
 color: black;    /* X6  sparisce, va sotto l'img, succede appena ho messo flex*/
 padding-left: 16px;
+padding-right: 20px;
+padding-top: 21px;
+padding-bottom: 23px;
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
-column-gap: 321px;
+column-gap: 319px;
 row-gap: 330px;
 }
-.imgprodotto button{
-    background-color: transparent;
-    border:0;
-}
-
 .descrizioneprod{
     background-color: #F5F5F5;
     padding-left: 16px;
@@ -576,3 +579,147 @@ text-decoration-line: line-through;
 margin-bottom: 32px;
 display: inline-block;
 }
+/****************************Prodotto*****************************************************/
+main#prodotto{
+    display: flex;
+    flex-direction: column;
+}
+.percorso{
+    width: 100%;
+    height: 72px;
+    text-align: left;
+    background-color:#F5F5F5;
+    padding-left: 41.59px;
+    display: flex;
+    align-items: center;
+    column-gap: 19px;
+}
+.scheda{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 0px;
+}
+.immaginiprod{
+    width: 1064px;  
+    height: 1064px;
+                             /*usa grid e metti un'img per ogni casella*/
+    background-color: red;
+}
+.descrizionebreve{
+    padding-left: 42px;
+    width: 452px;
+}
+.descrizionebreve h2{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 180%;
+color: #000000;
+margin-top: 5px;
+margin-bottom: 0;
+}
+.descrizionebreve p:nth-child(2){
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: 0.01em;
+margin-top: 5px;
+margin-bottom: 0;
+
+}
+.descrizionebreve p:nth-child(3){
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 800;
+font-size: 20px;
+line-height: 120%;
+display: inline-block;
+margin-top: 30px;
+margin-right: 8px;
+margin-bottom: 0;
+}
+.descrizionebreve p:nth-child(4){
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 170%;
+display: inline-block;
+margin-top: 30px;
+margin-right: 8px;
+margin-bottom: 0;
+}
+.descrizionebreve p:nth-child(5){
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 170%;
+text-decoration-line: line-through;
+display: inline-block;
+margin-top: 30px;
+margin-bottom: 0;
+margin-right: 200px;
+}
+.descrizionebreve #add{
+    margin-top: 50px;
+    
+    width: 385px;
+    height: 64px;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 21px;
+    text-align: left;
+}
+.descrizionebreve #add svg{
+    margin-left: 241.15px;
+}
+.descrizionebreve #cuore{   /*se ne va a capo*/
+    margin-top: 50px;
+    width: 385px;    /*è troppo grande spinge il cuore giù*/
+    height: 64px;
+    background-color: #000000;
+    color: #FFFFFF;
+    height: 64px;
+    width: 64px;
+    margin-left: 2px;
+}
+/*PER LA DESCRIPTION VEDI ACCORDION*/
+.description{
+    padding-left: 81px;
+    
+}
+.accordion{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: 0.01em;
+border: 0;
+width: 903px;
+height: 48px;
+padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    padding-left: 24px;
+}
+.panel{
+    background-color:#F5F5F5;   /*sicuramente devi aggiustare il margine*/
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.01em;
+padding-left: 24px;
+}
+
