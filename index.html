@@ -25,6 +25,21 @@
             <li><a href="listato.html" target="self">Listato</a></li>
         </ul>
         </nav>
+        <!--NAVIGATION PER MOBILE-->
+        <nav class="menumobile">
+            <ul>
+            <li><a><span><svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M14 7.90754L8 2.65754L2 7.90754V17H14V7.90754ZM8 0L16 7V17V19H14H2H0V17V7L8 0Z" fill="black" />
+            </svg>
+            </span></a></li>
+            <li><a><span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M2 2H7V7H2V2ZM0 0H2H7H9V2V7V9H7H2H0V7V2V0ZM2 13H7V18H2V13ZM0 11H2H7H9V13V18V20H7H2H0V18V13V11ZM18 2H13V7H18V2ZM13 0H11V2V7V9H13H18H20V7V2V0H18H13ZM13 13H18V18H13V13ZM11 11H13H18H20V13V18V20H18H13H11V18V13V11Z"
+                    fill="black" />
+            </svg></span></a></li>
+            </ul>
+        </nav>
         <div id="logo-container" class="item">
             <h4><a href="index.html">Brand Logo</a></h4>
         </div>
@@ -114,8 +129,8 @@
                     <h3>Keep you informed about news, trends, and special offers.</h3>  
                     <form>
                         <input type="email" method="post" placeholder="Insert your email and get -5% discount"/>
-                    </form>
-                    <button >send<span class="frecciabtn"><svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    </form> <!----attributi bottone per modale-->
+                    <button button type="button" id="newsletter-button" data-micromodal-trigger="modal-1">send<span class="frecciabtn"><svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5858 10.0001H0V8.00008H14.5858L8.29289 1.70718L9.70711 0.292969L18.4142 9.00008L9.70711 17.7072L8.29289 16.293L14.5858 10.0001Z" fill="white"/>
                         </svg>
                         
@@ -124,13 +139,22 @@
                     
                 
         </div>
-        <div class="mini-card">
+        <div class="mini-card" id="help">
             <span class="iconaminicard"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 20C11.7246 20 13.387 19.562 14.8595 18.7418L19.0947 19.0947L18.7418 14.8595C19.562 13.387 20 11.7246 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20ZM14.115 16.8621L14.3916 16.6958L16.9053 16.9053L16.6958 14.3916L16.8621 14.115C17.603 12.8824 18 11.4715 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C11.4715 18 12.8824 17.603 14.115 16.8621ZM10.0003 14.998C10.5528 14.998 11.0007 14.5503 11.0007 13.998C11.0007 13.4458 10.5528 12.998 10.0003 12.998C9.44786 12.998 9 13.4458 9 13.998C9 14.5503 9.44786 14.998 10.0003 14.998ZM9 12H11V11C11 11.0024 11.0047 10.9972 11.0154 10.9854C11.0417 10.9565 11.1039 10.888 11.2205 10.7955C11.3207 10.716 11.3517 10.6954 11.6048 10.535C12.4661 9.98899 13 9.03956 13 8C13 6.34315 11.6569 5 10 5C8.34315 5 7 6.34315 7 8H9C9 7.44772 9.44772 7 10 7C10.5523 7 11 7.44772 11 8C11 8.34732 10.8225 8.66287 10.534 8.84581C10.2102 9.05108 10.1564 9.08671 9.97749 9.22865C9.38274 9.70048 9 10.2627 9 11V12Z" fill="black"/>
                 </svg>
                 </span>
-                <div class="minicard" id="help" >
-                <h3><a href="">May we help you?</a></h3>
+                
+                <h3><a href="">May we help you?</a>
+                    <button><span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11 9H20V11H11V20H9V11H0V9H9V0H11V9Z" fill="black" />
+                    </svg>
+                    </span></button>
+                    <button><span><svg width="20" height="2" viewBox="0 0 20 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20 0V2H0V0H20Z" fill="black" />
+                    </svg>
+                    </span></button>
+                </h3>
             <ul>
                 <li><a href=""></a>Find my order</a></li>
                 <li><a href=""></a>FAQ</a></li>
@@ -139,15 +163,23 @@
                 <li><a href=""></a>Payment</a></li>
                 <li><a href=""></a>Contact us</a></li>
             </ul>
-                </div>
+                
             
         </div>
-        <div class="mini-card" >
+        <div class="mini-card" id="info">
             <span class="iconaminicard"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M11 22C4.92487 22 0 17.0751 0 11C0 4.92487 4.92487 0 11 0C17.0751 0 22 4.92487 22 11C22 17.0751 17.0751 22 11 22ZM10.998 20C15.9686 20 19.998 15.9706 19.998 11C19.998 6.02944 15.9686 2 10.998 2C6.02748 2 1.99805 6.02944 1.99805 11C1.99805 15.9706 6.02748 20 10.998 20ZM12.176 7.16023H10V5.24023H12.176V7.16023ZM12.176 17.0002H10V8.36023H12.176V17.0002Z" fill="black"/>
                 </svg></span>
-                <div class="minicard" id="info"> 
-         <h3><a href="#" target="blank">Company</a></h3>
+                
+         <h3><a href="#" target="blank">Company</a>
+        <button><span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11 9H20V11H11V20H9V11H0V9H9V0H11V9Z" fill="black" />
+                </svg>
+            </span></button>
+        <button><span><svg width="20" height="2" viewBox="0 0 20 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20 0V2H0V0H20Z" fill="black" />
+                </svg>
+            </span></button></h3>
             <ul>
                 <li><a href="#" target="blank"></a>#DiscoverBrandName</a></li>
                 <li><a href="#" target="blank"></a>Catalogs</a></li>
@@ -156,7 +188,7 @@
                 <li><a href="#" target="blank"></a>Arcturus Group</a></li>
                 <li><a href="#" target="blank"></a>Work with us</a></li>
             </ul>
-                 </div>
+                 
         </div>
 		<div id="social">
             <h3>Follow us on</h3>
@@ -203,6 +235,60 @@
         </div>
 		
 	</footer>
+    <!-----------MODALE SEND-->
+    <!-- [1] -->
+    <div id="modal-1" class="modal" aria-hidden="true">
+    
+        <!-- [2] -->
+        <div tabindex="-1" data-micromodal-close class="modal-backdrop">
+    
+            <!-- [3] -->
+            <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title" class="modal-wrapper">
+    
+    
+                <header>
+                    <h2 id="modal-1-title">
+                        Modal Title
+                    </h2>
+    
+                    <!-- [4] -->
+                    <button aria-label="Close modal" data-micromodal-close></button>
+                </header>
+    
+                <div id="modal-1-content">
+                    Modal Content
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    <style>
+                    .modal {
+                    display: none;
+                        }
 
+                    .modal.is-open {
+                      display: block;
+                        }
+                        .modal-backdrop{
+                            position: fixed;
+                            height: 100%;
+                            width: 100%;
+                            top: 0%;
+                            left: 0;
+                            background-color: rgba(0,0,0,0.5);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        .modal-wrapper{
+                            background-color: white;
+                            border-radius: 20px;
+                            padding: 20px;
+                            text-align: center;
+                        }
+    </style>
+<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>  <!--libreria modale--->
+<script src="modale.js" type="javascript/text"></script>
 </body>
 </html>
