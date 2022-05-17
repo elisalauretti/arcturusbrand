@@ -450,6 +450,7 @@ color: #9D9D9D;
     justify-content: center;
     column-gap: 5px;
     margin-left: 36px;
+    color: black;  /*non riesco a metterle nere*/
 }
 .numprod button{
     border:0;
@@ -538,6 +539,16 @@ text-decoration-line: line-through;
 margin-bottom: 32px;
 display: inline-block;
 }
+/***********************CAMBIO COLONNE*****************************/
+.listaprod.gallery-6-col {
+    grid-template-columns: repeat(6, 1fr);
+}
+ .listaprod.gallery-4-col {
+    grid-template-columns: repeat(4, 1fr);
+}
+.btn.active {
+    color: #6B6B6B;;
+}
 /*******************************************Prodotto*****************************************************/
 main#prodotto{
     width: 100%;
@@ -568,10 +579,14 @@ main#prodotto{
     row-gap: 40px;
     column-gap: 0px;
 }
-.immaginiprod{
+.contenitore-img{
     min-width: 66%;
-    max-width: 1064px;  /*anche diminuendo non ci entra lo stesso*/
+    max-width: 1064px;
     height: 1064px;
+}
+.immaginiprod{
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -582,6 +597,7 @@ main#prodotto{
     row-gap: 2px;
     column-gap: 2px;
 }
+
 #img1,#img2,#img3,#img4{   
     background-repeat: no-repeat;
 	background-size: cover;
@@ -596,11 +612,12 @@ main#prodotto{
     min-width: 33%;
     padding-left: 40px;
     padding-right: 0;
+    padding-top: 5px;
 }
 .descrizionebreve h2{/*font-family: 'Roboto';font-style: normal;font-weight: 700;color: #000000;*/
 font-size: 24px;
 line-height: 180%;
-margin-top: 5px;
+margin-top: 0;
 margin-bottom: 0;
 }
 .descrizionebreve p:nth-child(2){  /*font-family: 'Roboto';font-style: normal;font-weight: 400;*/
@@ -691,8 +708,6 @@ margin-right: 0px;
     padding-top: 24px;
     padding-bottom:  32px;
     line-height: 24px;
-    width: 903px;
-    height: 128px;
     margin-right: 0px;
 }
 .panel p{
@@ -879,13 +894,7 @@ margin-bottom: 63px;
 }
 /********************************APERTO*****************************/
 
-.accordion-mob{                 /*lo rimetti come prima appena schiacci il bottone, devi
-                                aggiungere la classe con js, ATTENTA NON CAMBIARLA ALTRIMENTI PERDI I PEZZI */
 
-}
-.accordionmob ul{
-
-}
 .mini-card button:first-of-type {
     display: none;
 }
@@ -1009,7 +1018,7 @@ width: 13px;
     letter-spacing: -0.03em;
     margin-bottom: 32px;
     margin-right: 8px;
-    display: inline-block;  /*conviene fare un contenitore da colorare di bianco e ci metti anche svg*/
+    display: inline-block; 
 }
 .descrizioneprod p:last-of-type {
     font-size: 10px;
@@ -1025,20 +1034,92 @@ width: 13px;
 
 .scheda {
     grid-template-columns: 1fr ;
-    grid-template-rows: 375px, 210px, 504px;
+    grid-template-rows: 1fr, 212px, 1185px;
     row-gap: 0px;
-
 }
-
-.immaginiprod {   /*vedi come hai fatto con banda*/
-    max-width: 375px;
+.contenitore-img {
+    width: 100%;
     height: 375px;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: 1fr ;
-    column-gap: 2px;
+    min-width: 375px;
+    max-width: 768px;
+    display: block;
     overflow-x: scroll;
     overflow-y: hidden;
 }
+.immaginiprod {
+    max-width: 3072px;
+    min-width: 1510px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+}
+
+
+.descrizionebreve {
+    width: 100%;
+    height: 210px;
+    padding-left: 24px;
+    padding-right: 25px;
+    padding-top: 16px;
+}
+.descrizionebreve h2 {
+    font-size: 16px;
+    line-height: 120%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.descrizionebreve p {
+    margin-top: 24px;
+}
+.descrizionebreve p:first-of-type {
+    margin-top: 1px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 16px;
+}
+.descrizionebreve #add {
+    margin-top: 28px;
+    width: 328px;
+    height: 48px;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    padding-left: 0px;
+}
+.descrizionebreve #add svg {
+    margin-left: 10px;
+}
+.descrizionebreve #cuore {
+    display: none;
+}
+/*PER LA DESCRIPTION VEDI ACCORDION*/
+.description {
+    padding-left: 0px;
+    margin-bottom: 31px;
+    line-height: 19px;
+    width:100%;
+    height: 1185px;  /*si accavalla con footer */
+}
+.accordion {
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/*chiuso*/
+.panel{
+    display: none;
+}
+.description {
+    height: 192;
+}
+
+
+
+
 
 
 
