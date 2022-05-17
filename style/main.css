@@ -252,7 +252,7 @@ footer{
 }
 #send{
     padding-top: 82px;
-    padding-left: 150px;/*metti%, attenta con quelli veri va a capo*/
+    padding-left: 150px;/*metti%, altrimenti macello per 1024px*/
     padding-right: 150px;
     height:358px;
     width: 50%;
@@ -543,6 +543,10 @@ display: inline-block;
 .listaprod.gallery-6-col {
     grid-template-columns: repeat(6, 1fr);
 }
+.listaprod.gallery-6-col .imgprodotto{
+    height: 264px;
+    row-gap: 67px;
+}
  .listaprod.gallery-4-col {
     grid-template-columns: repeat(4, 1fr);
 }
@@ -580,9 +584,10 @@ main#prodotto{
     column-gap: 0px;
 }
 .contenitore-img{
-    min-width: 66%;
+    max-width: 66%;
     max-width: 1064px;
-    height: 1064px;
+        /*ti spinge cose fuori per schermi più piccoli, non so regolare altezza*/
+        height: 1064px;
 }
 .immaginiprod{
     width: 100%;
@@ -608,9 +613,9 @@ main#prodotto{
     background-position: bottom;
 }
 .descrizionebreve{
-    max-width: 535px; /*anche diminuendo non ci entra lo stesso*/
+    max-width: 535px; /*fa un macello mi va a capo*/
     min-width: 33%;
-    padding-left: 40px;
+    padding-left: 30px;
     padding-right: 0;
     padding-top: 5px;
 }
@@ -686,6 +691,9 @@ line-height: 21px;
     letter-spacing: 0.01em;
     margin-right: 0px;
 }
+.attivo{  /*non sparisce*/
+display: none;
+}
 .accordion{ /*c'è un margine adx  che non si toglie è colpa del bottom*/
 font-size: 16px;
 letter-spacing: 0.01em;   
@@ -701,7 +709,10 @@ align-items: center;
 justify-content: space-between;
 margin-right: 0px;
 }
-.panel{ /*c'è un margine a dxche non si toglie*/
+.chiuso{
+    display: none;
+}
+.panel.aperto{ /*c'è un margine a dxche non si toglie*/
     background-color:#F5F5F5;  
     padding-left: 24px;
     padding-right:  24px;
@@ -721,15 +732,14 @@ margin-right: 0px;
     }
     /*************HEADER*********************/
     header{
-        column-gap: 1%;
-        justify-content: flex-start;
+        column-gap: 0;
+        justify-content:flex-start;
         width: 100%;
     }
     
     #logo-container{
         height: 65px;
-        width: 33%;
-        min-width: 125px;
+        width: 125px;
     }
     #fantasmino{
         display: none;
@@ -749,15 +759,13 @@ margin-right: 0px;
         /************NAVIGATION*******************/
 #navv {
     display: none;
-    width: 33%;
 }
-.menumobile {                           /*metti % cosi si aggiusta per tablet*/
+.menumobile {                         
     display: inline-block;
     padding-left: 28px;
     padding-right: 20px;
     height: 65px;
-    width: 100%;
-    max-width: 125px;
+    width: calc(50% - 62.5px);  
 }
 .menumobile ul {
     height: 100%;
@@ -775,7 +783,7 @@ margin-right: 0px;
     margin: 0;
     padding: 0;
 }
-#fantasma {
+#fantasma {   
     display: none;
 }
 /*************MAIN HOME********************/
@@ -890,22 +898,25 @@ margin-bottom: 63px;
     background-color: transparent;
 }
 .mini-card ul {
-        display: none;
+    display: none;
 }
-/********************************APERTO*****************************/
 
+/********************************APERTO*****************************/
 
 .mini-card button:first-of-type {
     display: none;
 }
-.mini-card button:last-of-type{
+
+.mini-card button:last-of-type {
     display: inline-block;
     border: 0;
     background-color: transparent;
 }
-.mini-card{
+
+.mini-card {
     height: 300px;
 }
+
 .mini-card ul {
     padding-left: 35px;
     display: flex;

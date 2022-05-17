@@ -55,7 +55,7 @@
         </div>
         <div class="numprod">
             <div id="icone2">
-            <button class="btn btn-4"><span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="btn btn-4 active"><span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M2 2H7V7H2V2ZM0 0H2H7H9V2V7V9H7H2H0V7V2V0ZM2 13H7V18H2V13ZM0 11H2H7H9V13V18V20H7H2H0V18V13V11ZM18 2H13V7H18V2ZM13 0H11V2V7V9H13H18H20V7V2V0H18H13ZM13 13H18V18H13V13ZM11 11H13H18H20V13V18V20H18H13H11V18V13V11Z" fill="black"/>
                 </svg>
                 </span></button>
@@ -65,7 +65,7 @@
                     </span></button></div>
         <p>124 Products</p>
         </div>
-        <div class="listaprod">
+        <div class="listaprod gallery-4-col">
             <div class="schedaprodotto">
                 <div class="imgprodotto" style="background-image: url(./images/listato.webp);">
                 <p>NEW</p>
@@ -405,18 +405,18 @@
             </svg></span>
 
         <h3><a href="#" target="blank">Company</a>
-            <button><span><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+            <button class="open1mob"><span><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M11 9H20V11H11V20H9V11H0V9H9V0H11V9Z"
                             fill="black" />
                     </svg>
                 </span></button>
-            <button><span><svg width="20" height="2" viewBox="0 0 20 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="close1mob attivo"><span><svg width="20" height="2" viewBox="0 0 20 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M20 0V2H0V0H20Z" fill="black" />
                     </svg>
                 </span></button>
         </h3>
-        <ul>
+        <ul class="panel-1mob">
             <li><a href="#" target="blank"></a>#DiscoverBrandName</a></li>
             <li><a href="#" target="blank"></a>Catalogs</a></li>
             <li><a href="#" target="blank"></a>For professionals</a></li>
@@ -471,64 +471,10 @@
     </div>
 
 </footer>
-<!-----------MODALE SEND-->
-<!-- [1] -->
-<div id="modal-1" class="modal" aria-hidden="true">
 
-    <!-- [2] -->
-    <div tabindex="-1" data-micromodal-close class="modal-backdrop">
+<script src="cambiocolonne.js" type="application/javascript"></script>
+<script src="accordionmobile.js" type="application/javascript"></script>
 
-        <!-- [3] -->
-        <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title" class="modal-wrapper">
-
-
-            <header>
-                <h2 id="modal-1-title">
-                    Modal Title
-                </h2>
-
-                <!-- [4] -->
-                <button aria-label="Close modal" data-micromodal-close></button>
-            </header>
-
-            <div id="modal-1-content">
-                Modal Content
-            </div>
-
-        </div>
-    </div>
-</div>
-<style>
-    .modal {
-        display: none;
-    }
-
-    .modal.is-open {
-        display: block;
-    }
-
-    .modal-backdrop {
-        position: fixed;
-        height: 100%;
-        width: 100%;
-        top: 0%;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .modal-wrapper {
-        background-color: white;
-        border-radius: 20px;
-        padding: 20px;
-        text-align: center;
-    }
-</style>
-<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
-<!--libreria modale--->
-<script src="modale.js" type="javascript/text"></script>
 </body>
 
 </html>
