@@ -686,7 +686,7 @@ line-height: 21px;
     color: #FFFFFF;
     margin-left: 0.5px;
 }
-/*PER LA DESCRIPTION VEDI ACCORDION*/
+/*ACCORDION*/
 .description{
     padding-left: 81px;
     margin-bottom: 80px;
@@ -694,7 +694,7 @@ line-height: 21px;
     letter-spacing: 0.01em;
     margin-right: 0px;
 }
-button.attivo{  /*non sparisce*/
+button.attivo{  
 display: none;
 }
 .accordion{ /*c'è un margine adx  che non si toglie è colpa del bottom*/
