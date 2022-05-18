@@ -314,7 +314,7 @@ color: #9D9D9D;
     justify-content: center;
 }
 .mini-card{
-    width: 25%;
+    width: 22%;
     height:358px;                           /*orientativa*/
     padding-top:82px ;
     padding-left: 70px;
@@ -686,7 +686,7 @@ line-height: 21px;
     color: #FFFFFF;
     margin-left: 0.5px;
 }
-/*ACCORDION*/
+/********************ACCORDION****************/
 .description{
     padding-left: 81px;
     margin-bottom: 80px;
@@ -895,18 +895,25 @@ margin-bottom: 63px;
     align-items: center;
     justify-content: space-between;
 }
-.mini-card button:first-of-type {
+.open1mob {
     display: inline-block;
     border: 0;
     background-color: transparent;
 }
-.mini-card ul {
+.close1mob.attivo{
+    display: none;
+}
+.panel1-mob.chiuso {
     display: none;
 }
 
 /********************************APERTO*****************************/
-
-.mini-card button:first-of-type {
+.close1mob {
+    display: inline-block;
+    border: 0;
+    background-color: transparent;
+}
+.open1mob.attivo{
     display: none;
 }
 
@@ -920,7 +927,7 @@ margin-bottom: 63px;
     height: 300px;
 }
 
-.mini-card ul {
+.panel1-mob.aperto {
     padding-left: 35px;
     display: flex;
     align-items: flex-start;
@@ -985,7 +992,7 @@ flex-wrap: wrap;
 .numprod #icone2 {
 display: none;
 }
-.listaprod {
+.listaprod.listaprod.gallery-4-col {
     display: grid;
     grid-template-rows: repeat(8, 1fr);
     grid-template-columns: 1fr 1fr ;
@@ -993,6 +1000,15 @@ display: none;
     row-gap: 0px;
     column-gap: 2px;
 }
+.listaprod.listaprod.gallery-4-col {
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: 1fr 1fr;
+    max-height: 2972px;
+    row-gap: 0px;
+    column-gap: 2px;
+}
+
 
 .schedaprodotto {
     display: flex;
@@ -1123,10 +1139,7 @@ width: 13px;
     align-items: center;
     justify-content: space-between;
 }
-/*chiuso*/
-.panel{
-    display: none;
-}
+
 .description {
     height: 192;
 }
